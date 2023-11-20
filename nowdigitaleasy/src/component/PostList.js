@@ -43,7 +43,7 @@ const PostList = () => {
       {loading && <CircularProgress />}
       <List>
         {posts.map(post => (
-          <ListItem key={post.id} button component={Link} to={`/post/${post.id}`}>
+          <ListItem key={post.id}  component={Link} to={`/post/${post.id}`}>
             <ListItemText primary={post.title} />
           </ListItem>
         ))}
