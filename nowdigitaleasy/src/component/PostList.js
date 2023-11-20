@@ -1,4 +1,4 @@
-// src/components/PostList.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ const PostList = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        setLoading(true); // Set loading to true when starting the fetch
+        setLoading(true); 
 
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
           params: {
@@ -22,12 +22,12 @@ const PostList = () => {
           },
         });
 
-        // Update the state with the fetched data
+        
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
       } finally {
-        setLoading(false); // Set loading to false when the fetch is complete (success or error)
+        setLoading(false); 
       }
     };
 
@@ -40,7 +40,7 @@ const PostList = () => {
 
   return (
     <div>
-      {loading && <CircularProgress />} {/* Loader while posts are being fetched */}
+      {loading && <CircularProgress />}
       <List>
         {posts.map(post => (
           <ListItem key={post.id} button component={Link} to={`/post/${post.id}`}>

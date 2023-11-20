@@ -1,4 +1,4 @@
-// src/components/SinglePost.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -44,8 +44,8 @@ const SinglePost = () => {
 
   return (
     <div>
-      {imageLoaded ? null : <CircularProgress />} {/* Loader */}
-      {imageError && <Typography color="error">Image failed to load.</Typography>} {/* Error message */}
+      {imageLoaded ? null : <CircularProgress />} 
+      {imageError && <Typography color="error">Image failed to load.</Typography>} 
       <img
         src={`https://source.unsplash.com/collection/928423/1280x720?random=${Math.random()}`}
         alt="Random Image"

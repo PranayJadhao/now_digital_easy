@@ -1,10 +1,10 @@
-// src/components/FavoriteList.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 
 const FavoriteList = () => {
-  // Implement logic to get favorite posts
+ 
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   return (
     <div>
